@@ -1,0 +1,12 @@
+.footerContainer{
+    height: 100px;
+    background-color: rgb(202, 123, 71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.statement{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(49, 49, 169);
+}

@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Body from "../Body/Body";
 import './Home.css';
 import { useEffect } from "react";
+import Footer from "../Footer/Footer";
 
 const Home =({audiobooks,isLoggedIn,setIsLoggedIn,handleLogout})=>{
 
@@ -28,6 +29,7 @@ const Home =({audiobooks,isLoggedIn,setIsLoggedIn,handleLogout})=>{
                 isLoggedIn={isLoggedIn} 
                 setIsLoggedIn={setIsLoggedIn}
                 />
+            <Footer />
         </div>
     )
 }
