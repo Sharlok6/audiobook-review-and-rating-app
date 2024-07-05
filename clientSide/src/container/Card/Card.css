@@ -1,0 +1,39 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 23%; 
+    height: 450px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 50%; /* Adjust height as needed */
+    object-fit: initial;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-author {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.card-genre {
+    font-size: 14px;
+    color: #666;
+}

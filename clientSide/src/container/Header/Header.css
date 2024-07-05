@@ -1,0 +1,238 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(202, 123, 71);
+  padding: 10px 20px;
+  height: auto;
+  flex-wrap: wrap;
+}
+.middle{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: rgb(202, 123, 71);
+  border: 2px solid blacks;
+}
+
+.punchline {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.punchline h2,
+.punchline h1 {
+  margin: 1px 0; /* Reduce vertical spacing */
+  color: rgb(49, 49, 169);
+}
+
+.first {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.second {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+}
+
+.fields {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  width: 55%; /* Adjust width as needed */
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  margin-right: 20px; /* Add margin between filter and searchBox */
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  height: 50%;
+  width: 30%;
+}
+
+.filter label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.filter select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter select:focus {
+  outline: none;
+  border-color: #007bff; /* Change focus color as needed */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25); /* Change shadow as needed */
+}
+
+.searchBox {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  height: 60%;
+  flex: 1; /* Allow searchBox to grow to fill remaining space */
+}
+
+.searchBox:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.logSign {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  width: 40%;
+  height: 40px;
+  justify-self: end;
+  margin-bottom: 10px;
+  
+}
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 0 20px;
+  width: 200px;
+  padding: 10px 0;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+  transition: 0.4s;
+  font-size: 20px;
+}
+.signupbtn {
+  color: white;
+  background-color: rgba(104, 85, 224, 1);
+}
+.loginheading{
+  color: rgb(104, 85, 224);
+
+}
+.loginbtn {
+  color: rgb(104, 85, 224);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(104, 85, 224, 1);
+}
+.logoutbtn{
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+  color: blue;
+}
+
+
+button:hover {
+  color: white;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+  background-color: rgba(104, 85, 224, 1);
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  color: rgb(79, 79, 182);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the button */
+  left: 50%;
+  margin-left: -30px; /* Adjust to center the tooltip */
+  opacity: 0;
+  transition: opacity 0.9s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px;
+  }
+
+  .punchline h1 {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+
+  .fields,
+  .logSign {
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 10px; 
+    padding: 5px;
+  }
+
+  .fields {
+    flex-direction: column; /* Stack fields vertically */
+  }
+
+  .filter,
+  .searchBox {
+    width: 90%; /* Full width */
+    margin-bottom: 10px; /* Space between filter and searchBox */
+    padding: 5px;
+  }
+
+  .filter {
+    justify-content: space-between; /* Adjust alignment for smaller screens */
+  }
+
+  .searchBox {
+    height: auto; /* Adjust height for responsiveness */
+  }
+}
+
+.audiobooks-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap onto next line if necessary */
+}
+
+.audiobook-item {
+  margin-bottom: 10px;
+  margin-right: 10px; /* Add margin between audiobook items */
+}

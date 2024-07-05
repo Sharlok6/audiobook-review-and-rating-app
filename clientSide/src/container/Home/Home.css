@@ -1,0 +1,8 @@
+.mainbody {
+    /* border: 5px solid black; */
+    max-width: max-content;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}

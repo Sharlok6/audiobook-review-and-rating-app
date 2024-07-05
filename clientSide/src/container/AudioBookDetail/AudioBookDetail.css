@@ -1,0 +1,249 @@
+.audiobook-detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* max-height: 100vh; */
+    height: auto;
+    padding: 40px;
+    border: 20px solid orchid;
+    border-radius: 10px;
+}
+.left, .right {
+    flex: 1; /* Ensures both left and right take up equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 2px solid black; */
+    overflow: hidden;
+}
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    /* border: 5px solid bisque; */
+}
+.image{
+    width: 100%; /* or any custom size */
+    height: 100%; 
+    object-fit: contain;
+}
+.audiobook-detail-item {
+    margin-top: 0; /* Ensure no top margin for individual items */
+}
+.review-form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* padding: 20px; */
+    /* border: 5px solid black; */
+}
+
+.review-form h3 {
+    margin-bottom: 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-textarea {
+    width: 300px;
+    height: 150px;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none; /* Prevent textarea resizing */
+}
+
+.submit-button {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.reviews-container {
+    max-height: 300px; /* Set a max height for the reviews section */
+    max-width: 400px;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    width: 100%;
+    margin-top: 0px;
+    border: 10px solid blanchedalmond;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.reviews-container h2 {
+    margin-bottom: 10px;
+}
+
+.review-item {
+    margin-bottom: 10px;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 10px; */
+    /* border: 2px solid black; */
+    padding: 10px;
+}
+
+.star {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ddd;
+}
+.star:hover{
+    color: gold;
+}
+
+.star.selected {
+    color: gold;
+    box-shadow: gold;
+}
+.choice{
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.ratings-container {
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    line-height: 1.5;
+}
+.ratings-container:hover{
+    border: 5px solid #b7a1a1;
+}
+.ratings-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.ratings-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.ratings-container::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+.rating-item {
+    margin-bottom: 10px; 
+    font-family:'Times New Roman', Times, serif; 
+    font-size: 16px; 
+}
+
+@media (max-width: 1200px) {
+    .imgContainer {
+        width: 500px;
+        height: 500px;
+    }
+
+    .review-textarea, .submit-button {
+        width: 250px;
+    }
+
+    .reviews-container {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 992px) {
+    .audiobook-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgContainer {
+        width: 400px;
+        height: 400px;
+    }
+
+    .review-textarea, .submit-button {
+        width: 200px;
+    }
+
+    .reviews-container {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .imgContainer {
+        width: 300px;
+        height: 300px;
+    }
+
+    .review-textarea, .submit-button {
+        width: 180px;
+    }
+
+    .reviews-container {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .audiobook-detail {
+        padding: 20px;
+        border: 10px solid orchid;
+    }
+
+    .imgContainer {
+        width: 250px;
+        height: 250px;
+    }
+
+    .review-textarea, .submit-button {
+        width: 150px;
+    }
+
+    .reviews-container {
+        max-width: 200px;
+    }
+
+    .star {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .imgContainer {
+        width: 200px;
+        height: 200px;
+    }
+
+    .review-textarea, .submit-button {
+        width: 130px;
+    }
+
+    .reviews-container {
+        max-width: 180px;
+    }
+
+    .star {
+        font-size: 1.2rem;
+    }
+}
